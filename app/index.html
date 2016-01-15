@@ -32,7 +32,11 @@
         </div>
         <div class="timeline">Your Timeline <i class="ion-ios-arrow-thin-down"></i></div>
       </div>
-      <div class="section">Goodbye</div>    
+      <div class="section" ng-repeat="tweet in timelineTweets">
+        <div class="content">
+          <div>{{tweet.text}}</div>
+        </div>
+      </div>    
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -60,6 +64,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/oauth-js/dist/oauth.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

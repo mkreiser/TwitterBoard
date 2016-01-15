@@ -26,13 +26,11 @@ angular.module('twitterBoardApp')
 					if (!error) {
 						authorizationResult = result;
 						deferred.resolve();
-					} else {
-
 					}
 				}
 			);
 
-			return deferred.promise();
+			return deferred.promise;
 		},
 		clearCache: function() {
 			OAuth.clearCache('twitter');
@@ -46,13 +44,13 @@ angular.module('twitterBoardApp')
 				url += '?count=' + count;
 			}
 
-			var promise = authorizationResult.get(url).done(function(data) {
+			authorizationResult.get(url).done(function(data) {
 				deferred.resolve(data);
 			}).fail(function(err) {
 				deferred.reject(err);
 			});
 
-			return deferred.promise();
+			return deferred.promise;
 		}
 	};
 });

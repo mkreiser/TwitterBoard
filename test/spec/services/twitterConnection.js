@@ -1,8 +1,12 @@
 'use strict';
 
 describe('Service: twitterService', function() {
-	beforeEach(module('twitterBoardApp'));
+	beforeEach(function() {
+		spyOn(fullpage, 'initialize').and.callFake(function() {});
+	});
 
+	beforeEach(module('twitterBoardApp'));
+	
 	var twitterService;
 	var $q;
 
