@@ -17,9 +17,6 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .otherwise({
-        redirectTo: '/'
-      });
+  .run(function() {
+    fullpage.initialize('#fullpage');
   });

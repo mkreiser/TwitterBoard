@@ -5,6 +5,10 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="styles/vendors/javascript.fullPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -14,15 +18,22 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link rel="stylesheet" href="styles/vendors/javascript.fullPage.css">
   </head>
-  <body ng-app="twitterBoardApp">
+  <body ng-app="twitterBoardApp" ng-controller="mainCtrl">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-
+    <div id="fullpage">
+      <div class="section homepage">
+        <div class="content">
+          <h1 class="md-display-4 white-text">TwitterBoard</h1>
+        </div>
+        <div class="timeline">Your Timeline <i class="ion-ios-arrow-thin-down"></i></div>
+      </div>
+      <div class="section">Goodbye</div>    
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -34,6 +45,8 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+
+    <script src="scripts/vendors/javascript.fullPage.js"></script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -53,9 +66,9 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
 
+    <script src="scripts/controllers/main.js"></script>
+
     <script src="scripts/services/twitterConnection.js"></script>
     <!-- endbuild -->
-
-    <script src="scripts/vendors/javascript.fullPage.js"></script>
 </body>
 </html>
