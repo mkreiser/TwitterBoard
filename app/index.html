@@ -27,14 +27,18 @@
     <!-- Add your site or application content here -->
     <div id="fullpage">
       <div class="section homepage">
+        <div class="header"><span>My Profile</span> &#8226; Settings</div>
         <div class="content">
-          <h1 class="md-display-4 white-text">TwitterBoard</h1>
+          <h1 class="md-display-4">TwitterBoard</h1>
         </div>
-        <div class="timeline">Your Timeline <i class="ion-ios-arrow-thin-down"></i></div>
+        <div class="footer timeline">Your Timeline <i class="ion-ios-arrow-thin-down"></i></div>
       </div>
-      <div class="section" ng-repeat="tweet in timelineTweets">
+      <div class="section tweet-section" ng-repeat="tweet in timelineTweets">
         <div class="content">
-          <div>{{tweet.text}}</div>
+          <div>{{tweet.text}}<a href="{{tweet.url_link}}" ng-if="tweet.url_link">{{tweet.url_link}}</a></div>
+        </div>
+        <div class="footer">
+          {{tweet.user.name}}
         </div>
       </div>    
     </div>

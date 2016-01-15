@@ -21,10 +21,9 @@ angular.module('twitterBoardApp')
 
 				if (tweet.entities.urls && tweet.entities.urls.length > 0) {
 					var url = tweet.entities.urls[0];
-					var prefix = tweet.text.substring(0, url.indices[0]);
-					var suffix = tweet.text.substring(url.indices[1], tweet.text.length);
-					console.log(prefix);
-					console.log(suffix);
+					tweet.text = tweet.text.substring(0, url.indices[0]);
+
+					tweet.url_link = url.url;
 				}
 			}
 

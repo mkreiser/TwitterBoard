@@ -11,6 +11,10 @@ $white: #FFF;
   margin: 0;
   padding: 0;
 }
+a, a:hover, a:visited {
+	color: $twitter-blue;
+	text-decoration: none;
+}
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -23,17 +27,34 @@ $white: #FFF;
 	top: 50%;
 	transform: translateY(-50%);
 }
+.footer {
+	bottom: 20px;
+	position: absolute;
+	width: 100%;
+}
 .homepage {
 	background-color: $twitter-blue;
+	color: $white;
 
-	.timeline {
-		bottom: 20px;
+	a, a:hover, a:visited {
 		color: $white;
+		text-decoration: none;
+	}
+
+	.header {
 		position: absolute;
-		text-align: center;
+		right: 20px;
+		text-align: right;
+		top: 20px;
 		width: 100%;
 	}
+
+	.timeline {
+		text-align: center;
+	}
 }
-.white-text {
-	color: $white;
+.tweet-section {
+	.footer {
+		left: 20px;
+	}
 }

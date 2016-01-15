@@ -17,6 +17,12 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .run(function() {
+  .run(function($location, $rootScope) {
     fullpage.initialize('#fullpage');
+
+    $rootScope.goToState = function(state) {
+      if (state) {
+        $location.path(state);
+      }
+    };
   });
